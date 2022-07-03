@@ -9,13 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: IB Outlets
     @IBOutlet var usernameLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    // MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
         welcomeViewController.username = usernameLabel.text
@@ -26,6 +24,7 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    // MARK: IB Actions
     @IBAction func loginButtonTapped() {
         if usernameLabel.text != "Jeremy" || passwordLabel.text != "Password" {
             showCredentialsAlert()
@@ -61,7 +60,7 @@ class LoginViewController: UIViewController {
         eraseCredentials()
     }
     
-    
+    // MARK: Private Methods
     private func showCredentialsAlert() {
         let alert = UIAlertController(
             title: "Wrong credentials",

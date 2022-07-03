@@ -19,7 +19,11 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
         welcomeViewController.username = usernameLabel.text
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func loginButtonTapped() {
@@ -28,6 +32,7 @@ class LoginViewController: UIViewController {
             eraseCredentials()
         }
     }
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         eraseCredentials()
     }

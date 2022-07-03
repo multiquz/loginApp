@@ -9,11 +9,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var usernameLabel: UITextField!
+    @IBOutlet var passwordLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
+        welcomeViewController.username = usernameLabel.text
+    }
 }
 

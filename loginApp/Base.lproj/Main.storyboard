@@ -38,6 +38,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log in"/>
                                 <connections>
+                                    <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LXG-YQ-OVy"/>
                                     <segue destination="PSy-Wj-g90" kind="show" id="aBf-T0-Xhy"/>
                                 </connections>
                             </button>
@@ -49,12 +50,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot user name?"/>
+                                        <connections>
+                                            <action selector="remindUsername" destination="BYZ-38-t0r" eventType="touchUpInside" id="oI1-lc-1pZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHH-Xf-Fzg">
                                         <rect key="frame" x="200" y="0.0" width="134" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot password?"/>
+                                        <connections>
+                                            <action selector="remindPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7u-JU-WYI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -110,12 +117,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log out"/>
+                                        <connections>
+                                            <segue destination="X2L-BO-WSz" kind="unwind" unwindAction="unwindFor:" id="Tda-V9-fdr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LBs-hR-ezo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.78410977125167847" green="0.94045549631118774" blue="0.76443260908126831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ao1-Rp-Tqt" firstAttribute="centerY" secondItem="tQO-c9-9eO" secondAttribute="centerY" id="bE3-mj-M1d"/>
                             <constraint firstItem="ao1-Rp-Tqt" firstAttribute="centerX" secondItem="tQO-c9-9eO" secondAttribute="centerX" id="kF2-Kz-NRp"/>
@@ -127,6 +137,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLP-e0-JnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="X2L-BO-WSz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="808.69565217391312" y="83.705357142857139"/>
         </scene>

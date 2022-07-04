@@ -36,22 +36,18 @@ class LoginViewController: UIViewController {
                 with: "Wrong Credentials",
                 and: "Enter correct username and/or password"
             )
-            erasePassword()
         }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        erasePassword()
     }
     
     @IBAction func remindUsername() {
         showAlert(with: "Don't worry", and: "Your username is \(username)")
-        erasePassword()
     }
     
     @IBAction func remindPassword() {
         showAlert(with: "Don't worry", and: "Your username is \(password)")
-        erasePassword()
     }
     
     // MARK: Private Methods
@@ -61,9 +57,13 @@ class LoginViewController: UIViewController {
             message: message,
             preferredStyle: .alert
         )
+        
         let action = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(action)
+        
         present(alert, animated: true)
+        
+        erasePassword()
     }
     
     private func erasePassword() {

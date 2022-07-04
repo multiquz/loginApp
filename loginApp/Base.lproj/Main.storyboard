@@ -83,8 +83,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordLabel" destination="ZsS-RA-96Q" id="yrc-Dt-WSW"/>
-                        <outlet property="usernameLabel" destination="cni-O1-BfJ" id="fG4-VG-HTZ"/>
+                        <outlet property="passwordTextField" destination="ZsS-RA-96Q" id="yrc-Dt-WSW"/>
+                        <outlet property="usernameTextField" destination="cni-O1-BfJ" id="fG4-VG-HTZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,8 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // MARK: IB Outlets
-    @IBOutlet var usernameLabel: UITextField!
-    @IBOutlet var passwordLabel: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
     // MARK: Private Properties
     private let username = "Jeremy"
@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     // MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
-        welcomeViewController.username = usernameLabel.text
+        welcomeViewController.username = usernameTextField.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     
     // MARK: IB Actions
     @IBAction func loginButtonTapped() {
-        if usernameLabel.text != username || passwordLabel.text != password {
+        if usernameTextField.text != username || passwordTextField.text != password {
             showAlert(
                 with: "Wrong Credentials",
                 and: "Enter correct username and/or password"
@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
+        passwordTextField.text = ""
+        usernameTextField.text = ""
     }
     
     @IBAction func remindUsername() {
@@ -55,7 +57,7 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.passwordLabel.text = ""
+            self.passwordTextField.text = ""
         }
         
         alert.addAction(action)

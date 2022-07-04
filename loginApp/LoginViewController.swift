@@ -52,17 +52,13 @@ class LoginViewController: UIViewController {
     
     // MARK: Private Methods
     private func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Ok", style: .default)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.passwordLabel.text = ""
+        }
+        
         alert.addAction(action)
-        
         present(alert, animated: true)
-        
-        passwordLabel.text = ""
     }
 }

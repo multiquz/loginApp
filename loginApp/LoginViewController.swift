@@ -63,10 +63,6 @@ class LoginViewController: UIViewController {
         
         present(alert, animated: true)
         
-        erasePassword()
-    }
-    
-    private func erasePassword() {
         passwordLabel.text = ""
     }
 }

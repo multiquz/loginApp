@@ -13,6 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
+    // MARK: Private Properties
+    private let username = "Jeremy"
+    private let password = "Password"
+    
+    
     // MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
@@ -26,55 +31,42 @@ class LoginViewController: UIViewController {
     
     // MARK: IB Actions
     @IBAction func loginButtonTapped() {
-        if usernameLabel.text != "Jeremy" || passwordLabel.text != "Password" {
-            showCredentialsAlert()
-            eraseCredentials()
+        if usernameLabel.text != username || passwordLabel.text != password {
+            showAlert(
+                with: "Wrong Credentials",
+                and: "Enter correct username and/or password"
+            )
+            erasePassword()
         }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        eraseCredentials()
+        erasePassword()
     }
     
     @IBAction func remindUsername() {
-        let alert = UIAlertController(
-            title: "Don't you worry!",
-            message: "Your username is Jeremy",
-            preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true)
-        eraseCredentials()
+        showAlert(with: "Don't worry", and: "Your username is \(username)")
+        erasePassword()
     }
     
     @IBAction func remindPassword() {
-        let alert = UIAlertController(
-            title: "Don't you worry!",
-            message: "Your password is Password",
-            preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true)
-        eraseCredentials()
+        showAlert(with: "Don't worry", and: "Your username is \(password)")
+        erasePassword()
     }
     
     // MARK: Private Methods
-    private func showCredentialsAlert() {
+    private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(
-            title: "Wrong credentials",
-            message: "Enter correct username and/or password",
+            title: title,
+            message: message,
             preferredStyle: .alert
         )
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(action)
         present(alert, animated: true)
     }
     
-    private func eraseCredentials() {
-        usernameLabel.text = ""
+    private func erasePassword() {
         passwordLabel.text = ""
     }
-    
 }

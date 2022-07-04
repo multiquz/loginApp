@@ -42,7 +42,6 @@
 		CE4DA7C12871BC2E001EAC04 = {
 			isa = PBXGroup;
 			children = (
-				CE4DA7E12871C552001EAC04 /* WelcomeViewController.swift */,
 				CE4DA7CC2871BC2E001EAC04 /* loginApp */,
 				CE4DA7CB2871BC2E001EAC04 /* Products */,
 			);
@@ -62,6 +61,7 @@
 				CE4DA7CD2871BC2E001EAC04 /* AppDelegate.swift */,
 				CE4DA7CF2871BC2E001EAC04 /* SceneDelegate.swift */,
 				CE4DA7D12871BC2E001EAC04 /* LoginViewController.swift */,
+				CE4DA7E12871C552001EAC04 /* WelcomeViewController.swift */,
 				CE4DA7D32871BC2E001EAC04 /* Main.storyboard */,
 				CE4DA7D62871BC30001EAC04 /* Assets.xcassets */,
 				CE4DA7D82871BC30001EAC04 /* LaunchScreen.storyboard */,

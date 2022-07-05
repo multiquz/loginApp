@@ -15,8 +15,7 @@ class LoginViewController: UIViewController {
     
     // MARK: Private Properties
     
-    private let username = "Jeremy"
-    private let password = "Password"
+    private let user = User.getUser()
     
     
     // MARK: Override Methods
@@ -33,7 +32,7 @@ class LoginViewController: UIViewController {
     // MARK: IB Actions
     //try guard please instead if
     @IBAction func loginButtonTapped() {
-        guard usernameTextField.text == username && passwordTextField.text == password else {
+        guard usernameTextField.text == user.username && passwordTextField.text == user.password else {
             showAlert(with: "Wrong Credentials", and: "Enter correct username and/or password")
             return
         }
@@ -46,11 +45,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func remindUsername() {
-        showAlert(with: "Don't worry", and: "Your username is \(username)")
+        showAlert(with: "Don't worry", and: "Your username is \(user.username)")
     }
     
     @IBAction func remindPassword() {
-        showAlert(with: "Don't worry", and: "Your username is \(password)")
+        showAlert(with: "Don't worry", and: "Your username is \(user.password)")
     }
     
     // MARK: Private Methods

@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,6 @@
                                         <state key="normal" title="Log in"/>
                                         <connections>
                                             <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LXG-YQ-OVy"/>
-                                            <segue destination="b0p-WQ-OJj" kind="show" identifier="showWelcomeViewController" id="aBf-T0-Xhy"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f35-nD-Imy">
@@ -83,6 +82,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="ZsS-RA-96Q" id="yrc-Dt-WSW"/>
                         <outlet property="usernameTextField" destination="cni-O1-BfJ" id="fG4-VG-HTZ"/>
+                        <segue destination="b0p-WQ-OJj" kind="presentation" identifier="showWelcomeViewController" id="Mtp-wB-oWN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,13 +94,13 @@
             <objects>
                 <viewController title="Welcome View Controller" modalPresentationStyle="fullScreen" id="PSy-Wj-g90" customClass="WelcomeViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQO-c9-9eO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-Rp-Tqt">
-                                <rect key="frame" x="161.5" y="248" width="91.5" height="346.5"/>
+                                <rect key="frame" x="161.5" y="275" width="91.5" height="346.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-hH-XUU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-hH-XUU">
                                         <rect key="frame" x="12.5" y="0.0" width="66.5" height="59.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
@@ -145,7 +145,7 @@
             <objects>
                 <viewController id="myZ-Y7-xTe" customClass="InfoViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ge2-aW-UMK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="thx-1b-KUK"/>
                         <color key="backgroundColor" red="0.78410977125167847" green="0.94045549631118774" blue="0.76443260908126831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -167,7 +167,7 @@
             <objects>
                 <viewController id="4Kx-Jy-bgZ" customClass="PetViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lMR-rc-PBe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="R3I-kL-ZdP"/>
                         <color key="backgroundColor" red="0.78410977125167847" green="0.94045549631118774" blue="0.76443260908126831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -185,6 +185,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="iw5-pg-8EM"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FcP-4o-h01">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -204,7 +205,7 @@
                     <tabBarItem key="tabBarItem" title="Main Info" image="info" catalog="system" id="7qH-KJ-yze"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ptS-tX-efq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

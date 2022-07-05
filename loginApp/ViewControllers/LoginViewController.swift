@@ -17,11 +17,10 @@ class LoginViewController: UIViewController {
     
     private let user = User.getUser()
     
-    
     // MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
-        welcomeViewController.username = usernameTextField.text
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = user.person.name
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

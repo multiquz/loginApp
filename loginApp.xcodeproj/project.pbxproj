@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4B87B5287448AF00FC975C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4B87B4287448AF00FC975C /* InfoViewController.swift */; };
+		CE4B87B72874492300FC975C /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4B87B62874492300FC975C /* PetViewController.swift */; };
 		CE4DA7CE2871BC2E001EAC04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DA7CD2871BC2E001EAC04 /* AppDelegate.swift */; };
 		CE4DA7D02871BC2E001EAC04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DA7CF2871BC2E001EAC04 /* SceneDelegate.swift */; };
 		CE4DA7D22871BC2E001EAC04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DA7D12871BC2E001EAC04 /* LoginViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4B87B4287448AF00FC975C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CE4B87B62874492300FC975C /* PetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
 		CE4DA7CA2871BC2E001EAC04 /* loginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4DA7CD2871BC2E001EAC04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4DA7CF2871BC2E001EAC04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			children = (
 				CE4DA7D12871BC2E001EAC04 /* LoginViewController.swift */,
 				CE4DA7E12871C552001EAC04 /* WelcomeViewController.swift */,
+				CE4B87B4287448AF00FC975C /* InfoViewController.swift */,
+				CE4B87B62874492300FC975C /* PetViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,7 +194,9 @@
 				CE6B886B28742EA80081EA4F /* Profile.swift in Sources */,
 				CE4DA7E22871C552001EAC04 /* WelcomeViewController.swift in Sources */,
 				CE4DA7CE2871BC2E001EAC04 /* AppDelegate.swift in Sources */,
+				CE4B87B5287448AF00FC975C /* InfoViewController.swift in Sources */,
 				CE4DA7D02871BC2E001EAC04 /* SceneDelegate.swift in Sources */,
+				CE4B87B72874492300FC975C /* PetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

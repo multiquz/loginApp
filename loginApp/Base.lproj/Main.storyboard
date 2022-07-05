@@ -42,7 +42,7 @@
                                         <state key="normal" title="Log in"/>
                                         <connections>
                                             <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LXG-YQ-OVy"/>
-                                            <segue destination="PSy-Wj-g90" kind="show" id="aBf-T0-Xhy"/>
+                                            <segue destination="PSy-Wj-g90" kind="show" identifier="showWelcomeViewController" id="aBf-T0-Xhy"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="f35-nD-Imy">

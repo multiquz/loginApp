@@ -30,13 +30,13 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: IB Actions
+    //try guard please instead if
     @IBAction func loginButtonTapped() {
-        if usernameTextField.text != username || passwordTextField.text != password {
-            showAlert(
-                with: "Wrong Credentials",
-                and: "Enter correct username and/or password"
-            )
+        guard usernameTextField.text == username && passwordTextField.text == password else {
+            showAlert(with: "Wrong Credentials", and: "Enter correct username and/or password")
+            return
         }
+        performSegue(withIdentifier: "showWelcomeViewController", sender: nil)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

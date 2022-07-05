@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: Private Properties
+    
     private let username = "Jeremy"
     private let password = "Password"
     

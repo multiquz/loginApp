@@ -8,22 +8,15 @@
 import UIKit
 
 class PetViewController: UIViewController {
-
+    // MARK: IB Outlets
+    @IBOutlet var petImageView: UIImageView!
+    
+    // MARK: Public Properties
+    var petImage: String!
+    
+    // MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+   petImageView.image = UIImage(named: petImage ?? "")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

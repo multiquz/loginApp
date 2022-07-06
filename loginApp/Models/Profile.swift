@@ -23,7 +23,7 @@ struct User {
                 company: "Alfa Bank",
                 hobbies: [.skateBoarding, .softwareDevelopment, .gameDevelopment],
                 learningGoal: "To become a better Scrum Master",
-                image: "cat.jpeg"
+                image: "cat"
             )
         )
     }
@@ -46,4 +46,5 @@ enum Hobby: String {
     case skateBoarding = "🛹 Skateboarding"
     case softwareDevelopment = "📱 Sowtware development"
     case gameDevelopment = "🪬 Game development"
+    case someOtherHobby = "🔭 Something else"
 }

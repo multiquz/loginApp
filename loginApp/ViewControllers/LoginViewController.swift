@@ -19,8 +19,29 @@ class LoginViewController: UIViewController {
     
     // MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = user.person.name
+        guard let tabBarViewController = segue.destination as? UITabBarController else { return }
+        guard let tabVarViewControllers = tabBarViewController.viewControllers else { return }
+        tabVarViewControllers.forEach { viewController in
+            if let welcomeViewController = viewController as? WelcomeViewController {
+                welcomeViewController.username = user.person.name
+            } else if let hobbiesViewController = viewController as? HobbiesViewController {
+                hobbiesViewController.firstHobby = user.person.hobbies[0].rawValue
+                hobbiesViewController.secondHobby = user.person.hobbies[1].rawValue
+                hobbiesViewController.thirdHobby = user.person.hobbies[2].rawValue
+            } else if let navigationViewController = viewController as? UINavigationController {
+                let navigationViewControllers = navigationViewController.viewControllers
+                navigationViewControllers.forEach { navigationViewController in
+                    if let personalDataViewController = navigationViewController as? PersonalDataViewController {
+                        personalDataViewController.dateOfBirth = user.person.dateOfBirth
+                        personalDataViewController.job = user.person.job
+                        personalDataViewController.company = user.person.company
+                        personalDataViewController.learningGoal = user.person.learningGoal
+                    } else if let petViewController = navigationViewController as? PetViewController {
+                        petViewController.petImage = user.person.image
+                    }
+                }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

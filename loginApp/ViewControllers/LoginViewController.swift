@@ -36,8 +36,7 @@ class LoginViewController: UIViewController {
                         personalDataViewController.job = user.person.job
                         personalDataViewController.company = user.person.company
                         personalDataViewController.learningGoal = user.person.learningGoal
-                    } else if let petViewController = navigationViewController as? PetViewController {
-                        petViewController.petImage = user.person.image
+                        personalDataViewController.petImage = user.person.image
                     }
                 }
             }

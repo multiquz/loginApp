@@ -315,7 +315,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYs-bw-Iot">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYs-bw-Iot">
                                 <rect key="frame" x="16" y="200" width="382" height="573"/>
                             </imageView>
                         </subviews>
@@ -370,7 +370,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="myZ-Y7-xTe" kind="relationship" relationship="rootViewController" id="9As-4i-gnA"/>
+                        <segue destination="myZ-Y7-xTe" kind="relationship" relationship="rootViewController" id="Akt-yb-Wvk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2WG-6C-QsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

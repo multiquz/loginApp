@@ -29,8 +29,10 @@ class PersonalDataViewController: UIViewController {
         jobLabel.text = job
         companyLabel.text = company
         learningGoalLabel.text = learningGoal
-      
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let petViewController = segue.destination as? PetViewController else { return }
+        petViewController.petImage = petImage
+    }
 }

@@ -33,14 +33,14 @@ class LoginViewController: UIViewController {
                 
             } else if let navigationViewController = viewController as? UINavigationController {
                 guard let personalDataViewController = navigationViewController.topViewController as? PersonalDataViewController else { return }
-                        personalDataViewController.dateOfBirth = user.person.dateOfBirth
-                        personalDataViewController.job = user.person.job
-                        personalDataViewController.company = user.person.company
-                        personalDataViewController.learningGoal = user.person.learningGoal
-                        personalDataViewController.petImage = user.person.image
-                    }
-                }
+                personalDataViewController.dateOfBirth = user.person.dateOfBirth
+                personalDataViewController.job = user.person.job
+                personalDataViewController.company = user.person.company
+                personalDataViewController.learningGoal = user.person.learningGoal
+                personalDataViewController.petImage = user.person.image
             }
+        }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)

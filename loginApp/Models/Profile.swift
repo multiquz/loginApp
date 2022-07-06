@@ -39,7 +39,6 @@ struct Person {
     let learningGoal: String
     let image: String
     
-    
 }
 
 enum Hobby: String {

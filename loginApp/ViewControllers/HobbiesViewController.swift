@@ -10,9 +10,6 @@ import UIKit
 class HobbiesViewController: UIViewController {
     
     // MARK: IB Outlets
-    @IBOutlet var firstHobbyLabel: UILabel!
-    @IBOutlet var secondHobbyLabel: UILabel!
-    @IBOutlet var thirdHobbyLabel: UILabel!
     @IBOutlet var hobbyLabels: [UILabel]!
     
     // MARK: Public Properties
@@ -21,8 +18,9 @@ class HobbiesViewController: UIViewController {
     // MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        for (index, hobbyLabel) in hobbyLabels.enumerated() {
-            hobbyLabel.text = user.person.hobbies[index].rawValue
+        
+        for index in 0..<hobbyLabels.count {
+            hobbyLabels[index].text = user.person.hobbies[index].rawValue
         }
     }
 }

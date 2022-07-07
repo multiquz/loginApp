@@ -19,7 +19,6 @@ class HobbiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         if hobbyLabels.count == user.person.hobbies.count {
             for index in 0..<hobbyLabels.count {
                 hobbyLabels[index].text = user.person.hobbies[index].rawValue

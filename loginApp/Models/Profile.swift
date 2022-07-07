@@ -13,19 +13,7 @@ struct User {
     let person: Person
     
     static func getUser() -> User {
-        User(
-            username: "Jeremy",
-            password: "Password",
-            person: Person(
-                dateOfBirth: "28.06.1995",
-                name: "Vladimir Proshchin",
-                job: "Scrum Master",
-                company: "Alfa Bank",
-                hobbies: [.skateBoarding, .softwareDevelopment, .gameDevelopment],
-                learningGoal: "To become a better Scrum Master",
-                image: "cat"
-            )
-        )
+        User(username: "Jeremy", password: "Password", person: Person.getPerson())
     }
 }
 
@@ -39,6 +27,17 @@ struct Person {
     let learningGoal: String
     let image: String
     
+    static func getPerson() -> Person {
+        Person(
+            dateOfBirth: "28.06.1995",
+            name: "Vladimir Proshchin",
+            job: "Scrum Master",
+            company: "Alfa Bank",
+            hobbies: [.skateBoarding, .softwareDevelopment, .gameDevelopment],
+            learningGoal: "To become a better Scrum Master",
+            image: "cat"
+        )
+    }
 }
 
 enum Hobby: String {

@@ -303,9 +303,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Hobbies" image="gamecontroller" catalog="system" id="9pF-6t-tc5"/>
                     <connections>
-                        <outlet property="firstHobbyLabel" destination="w49-zz-dAw" id="Vsp-hA-lLE"/>
-                        <outlet property="secondHobbyLabel" destination="Qhw-vn-gcQ" id="p70-2B-af1"/>
-                        <outlet property="thirdHobbyLabel" destination="scT-iV-84j" id="1F6-9m-2me"/>
                         <outletCollection property="hobbyLabels" destination="w49-zz-dAw" collectionClass="NSMutableArray" id="F80-sd-Snw"/>
                         <outletCollection property="hobbyLabels" destination="Qhw-vn-gcQ" collectionClass="NSMutableArray" id="Cqd-gX-r4H"/>
                         <outletCollection property="hobbyLabels" destination="scT-iV-84j" collectionClass="NSMutableArray" id="AOv-Hp-4n3"/>

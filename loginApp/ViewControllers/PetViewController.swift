@@ -13,11 +13,11 @@ class PetViewController: UIViewController {
     @IBOutlet var petImageView: UIImageView!
     
     // MARK: Public Properties
-    var petImage: String!
+    var user: User!
     
     // MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        petImageView.image = UIImage(named: petImage)
+        petImageView.image = UIImage(named: user.person.image)
     }
 }

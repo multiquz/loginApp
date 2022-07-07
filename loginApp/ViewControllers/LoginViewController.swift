@@ -24,20 +24,14 @@ class LoginViewController: UIViewController {
         
         tabVarViewControllers.forEach { viewController in
             if let welcomeViewController = viewController as? WelcomeViewController {
-                welcomeViewController.username = user.person.name
+                welcomeViewController.user = user
                 
             } else if let hobbiesViewController = viewController as? HobbiesViewController {
-                hobbiesViewController.firstHobby = user.person.hobbies[0].rawValue
-                hobbiesViewController.secondHobby = user.person.hobbies[1].rawValue
-                hobbiesViewController.thirdHobby = user.person.hobbies[2].rawValue
+                hobbiesViewController.user = user
                 
             } else if let navigationViewController = viewController as? UINavigationController {
                 guard let personalDataViewController = navigationViewController.topViewController as? PersonalDataViewController else { return }
-                personalDataViewController.dateOfBirth = user.person.dateOfBirth
-                personalDataViewController.job = user.person.job
-                personalDataViewController.company = user.person.company
-                personalDataViewController.learningGoal = user.person.learningGoal
-                personalDataViewController.petImage = user.person.image
+                personalDataViewController.user = user
             }
         }
     }

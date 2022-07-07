@@ -16,23 +16,19 @@ class PersonalDataViewController: UIViewController {
     @IBOutlet var learningGoalLabel: UILabel!
     
     // MARK: Public Properties
-    var dateOfBirth: String!
-    var job: String!
-    var company: String!
-    var learningGoal: String!
-    var petImage: String!
+    var user: User!
     
     // MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateOfBirthLabel.text = dateOfBirth
-        jobLabel.text = job
-        companyLabel.text = company
-        learningGoalLabel.text = learningGoal
+        dateOfBirthLabel.text = user.person.dateOfBirth
+        jobLabel.text = user.person.job
+        companyLabel.text = user.person.company
+        learningGoalLabel.text = user.person.learningGoal
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let petViewController = segue.destination as? PetViewController else { return }
-        petViewController.petImage = petImage
+        petViewController.user = user
     }
 }

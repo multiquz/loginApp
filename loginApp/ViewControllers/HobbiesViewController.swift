@@ -13,18 +13,16 @@ class HobbiesViewController: UIViewController {
     @IBOutlet var firstHobbyLabel: UILabel!
     @IBOutlet var secondHobbyLabel: UILabel!
     @IBOutlet var thirdHobbyLabel: UILabel!
-    @IBOutlet var fourthHobbyLabel: UILabel!
+    @IBOutlet var hobbyLabels: [UILabel]!
     
     // MARK: Public Properties
-    var firstHobby: String!
-    var secondHobby: String!
-    var thirdHobby: String!
+    var user: User!
     
     // MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstHobbyLabel.text = firstHobby
-        secondHobbyLabel.text = secondHobby
-        thirdHobbyLabel.text = thirdHobby
+        for (index, hobbyLabel) in hobbyLabels.enumerated() {
+            hobbyLabel.text = user.person.hobbies[index].rawValue
+        }
     }
 }

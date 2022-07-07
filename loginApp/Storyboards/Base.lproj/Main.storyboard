@@ -260,54 +260,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="84p-qT-bF3">
-                                <rect key="frame" x="16" y="374.5" width="382" height="147.5"/>
+                                <rect key="frame" x="16" y="399.5" width="382" height="97.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My hobbies are:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfl-of-bRC">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="w49-zz-dAw">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Qhw-vn-gcQ">
-                                        <rect key="frame" x="0.0" y="85.5" width="382" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="382" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="scT-iV-84j">
-                                        <rect key="frame" x="0.0" y="121" width="382" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="71" width="382" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My hobbies are:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfl-of-bRC">
+                                <rect key="frame" x="16" y="338.5" width="231" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TiY-ED-upq"/>
                         <color key="backgroundColor" red="0.78410977125167847" green="0.94045549631118774" blue="0.76443260908126831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="84p-qT-bF3" firstAttribute="centerY" secondItem="AOB-ui-1Es" secondAttribute="centerY" id="01i-6r-2YF"/>
                             <constraint firstItem="84p-qT-bF3" firstAttribute="leading" secondItem="TiY-ED-upq" secondAttribute="leading" constant="16" id="6Wr-Vg-fwl"/>
+                            <constraint firstItem="84p-qT-bF3" firstAttribute="top" secondItem="Bfl-of-bRC" secondAttribute="bottom" constant="20" id="838-AE-4wv"/>
+                            <constraint firstItem="TiY-ED-upq" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Bfl-of-bRC" secondAttribute="trailing" constant="167" id="87u-2Y-581"/>
                             <constraint firstItem="84p-qT-bF3" firstAttribute="centerX" secondItem="AOB-ui-1Es" secondAttribute="centerX" id="EdU-dK-F2j"/>
+                            <constraint firstItem="Bfl-of-bRC" firstAttribute="leading" secondItem="TiY-ED-upq" secondAttribute="leading" constant="16" id="dFk-rU-t1X"/>
                             <constraint firstItem="TiY-ED-upq" firstAttribute="trailing" secondItem="84p-qT-bF3" secondAttribute="trailing" constant="16" id="eSO-hT-MQK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hobbies" image="gamecontroller" catalog="system" id="9pF-6t-tc5"/>
                     <connections>
-                        <outlet property="firstHobbyLabel" destination="w49-zz-dAw" id="0fS-D5-Fed"/>
-                        <outlet property="secondHobbyLabel" destination="Qhw-vn-gcQ" id="aQ0-RS-93Q"/>
-                        <outlet property="thirdHobbyLabel" destination="scT-iV-84j" id="VAO-Ki-eny"/>
+                        <outlet property="firstHobbyLabel" destination="w49-zz-dAw" id="Vsp-hA-lLE"/>
+                        <outlet property="secondHobbyLabel" destination="Qhw-vn-gcQ" id="p70-2B-af1"/>
+                        <outlet property="thirdHobbyLabel" destination="scT-iV-84j" id="1F6-9m-2me"/>
+                        <outletCollection property="hobbyLabels" destination="w49-zz-dAw" collectionClass="NSMutableArray" id="F80-sd-Snw"/>
+                        <outletCollection property="hobbyLabels" destination="Qhw-vn-gcQ" collectionClass="NSMutableArray" id="Cqd-gX-r4H"/>
+                        <outletCollection property="hobbyLabels" destination="scT-iV-84j" collectionClass="NSMutableArray" id="AOv-Hp-4n3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xxj-3P-dOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4353.623188405797" y="83.705357142857139"/>
+            <point key="canvasLocation" x="4352.1739130434789" y="83.705357142857139"/>
         </scene>
         <!--Pet View Controller-->
         <scene sceneID="qac-kK-7rp">
